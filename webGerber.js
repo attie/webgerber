@@ -57,7 +57,7 @@ wG.guessLayer = function guessLayer(f) {
     f = f.toLowerCase();
     if(f.match(/\.drl|\.drd|\.txt/))
         return [wG.BOTTOM|wG.TOP, wG.BOARD];
-    if(f.match(/\.out|outline/))
+    if(f.match(/\.out|\.gml|outline/))
         return [wG.BOTTOM|wG.TOP, wG.OUTLINE];
     if(f.match(/\.gbl|\.sol/) || f.match(/bot/) && f.match(/copper|signal/))
         return [wG.BOTTOM, wG.COPPER];
