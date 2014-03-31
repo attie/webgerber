@@ -474,7 +474,7 @@ wG.renderLayer = function renderLayer(canvas, g, limits) {
                     if(g.type == wG.COPPER)
                         ctx.lineWidth = Math.ceil(s[1]*scaleMax/3+.01)/scaleMax*3;
                     else
-                        ctx.lineWidth = s[1];
+                        ctx.lineWidth = Math.max(s[1], 0.008);
                     ctx.lineCap = 'round';
                     if(mode == 1 || mode == 5) { // Linear Interpolation.
                         ctx.beginPath();
