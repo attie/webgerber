@@ -121,7 +121,7 @@ wG.loadDrill = function loadDrill(text) {
                 body = true;
         } else {
             function getNum(offset) {
-                var r = /^[-+\d]*/.exec(d = d.slice(offset)); // assert(r);
+                var r = /^[-+]?\d+(\.\d+)?/.exec(d = d.slice(offset)); // assert(r);
                 d = d.slice(r[0].length);
                 return numVal(r[0]);
             }
@@ -297,7 +297,7 @@ wG.load = function load(text) {
                     d = d.slice(r[0].length);
                 }
                 function getNum(offset) {
-                    var r = /^[-+\d]*/.exec(d = d.slice(offset)); // assert(r);
+                    var r = /^[-+]?\d+(\.\d+)?/.exec(d = d.slice(offset)); // assert(r);
                     d = d.slice(r[0].length);
                     return numVal(r[0]);
                 }
